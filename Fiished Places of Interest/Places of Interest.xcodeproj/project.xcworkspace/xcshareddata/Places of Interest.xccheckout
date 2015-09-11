@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16363DEC-F12F-4532-81C4-1F76F8546A3C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Places of Interest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
+		<string>https://github.com/GLBaird/iOSDevACJuly062015.git</string>
+		<key>EF26C00BDFCF29F63D4CCD4062CE3ABEAE489C81</key>
+		<string>https://github.com/GLBaird/iOSdevmediaSep82015.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fiished Places of Interest/Places of Interest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
+		<string>../../../../iOSDevACJuly062015</string>
+		<key>EF26C00BDFCF29F63D4CCD4062CE3ABEAE489C81</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GLBaird/iOSdevmediaSep82015.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EF26C00BDFCF29F63D4CCD4062CE3ABEAE489C81</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSDevACJuly062015</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EF26C00BDFCF29F63D4CCD4062CE3ABEAE489C81</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSdevmediaSep82015</string>
+		</dict>
+	</array>
+</dict>
+</plist>

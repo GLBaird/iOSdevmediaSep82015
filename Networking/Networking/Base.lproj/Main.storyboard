@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6eQ-Xu-wF5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload-->
+        <scene sceneID="w0h-pr-QQp">
+            <objects>
+                <viewController id="rk2-bO-BWC" customClass="UploadViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gop-IN-fY2"/>
+                        <viewControllerLayoutGuide type="bottom" id="BjB-3W-Ix2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MUX-5C-vWh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJf-8A-8Ec">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="6wL-bA-gDN">
+                                        <connections>
+                                            <action selector="pickImage:" destination="rk2-bO-BWC" id="X8x-qr-8nb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IJu-SZ-gNz"/>
+                                    <barButtonItem title="Upload" id="vfd-HT-bob">
+                                        <connections>
+                                            <action selector="upload:" destination="rk2-bO-BWC" id="Puz-eM-Svh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-Oi-w9M">
+                                <rect key="frame" x="16" y="28" width="288" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="bdT-Ze-EHI"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UPy-5S-f4u">
+                                <rect key="frame" x="16" y="211" width="288" height="256"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PDb-Oi-w9M" firstAttribute="trailing" secondItem="MUX-5C-vWh" secondAttribute="trailingMargin" id="4vH-1I-7vU"/>
+                            <constraint firstItem="BjB-3W-Ix2" firstAttribute="top" secondItem="SJf-8A-8Ec" secondAttribute="bottom" id="6Py-bI-n5q"/>
+                            <constraint firstAttribute="trailing" secondItem="SJf-8A-8Ec" secondAttribute="trailing" id="Dwi-CF-sba"/>
+                            <constraint firstItem="PDb-Oi-w9M" firstAttribute="leading" secondItem="MUX-5C-vWh" secondAttribute="leadingMargin" id="I1D-di-HON"/>
+                            <constraint firstItem="SJf-8A-8Ec" firstAttribute="top" secondItem="UPy-5S-f4u" secondAttribute="bottom" constant="8" id="Rlc-4I-UrF"/>
+                            <constraint firstItem="UPy-5S-f4u" firstAttribute="trailing" secondItem="MUX-5C-vWh" secondAttribute="trailingMargin" id="XJL-6W-hBT"/>
+                            <constraint firstItem="PDb-Oi-w9M" firstAttribute="top" secondItem="gop-IN-fY2" secondAttribute="bottom" constant="8" id="auS-aS-QDT"/>
+                            <constraint firstItem="UPy-5S-f4u" firstAttribute="top" secondItem="PDb-Oi-w9M" secondAttribute="bottom" constant="8" id="iwe-zO-lPc"/>
+                            <constraint firstItem="UPy-5S-f4u" firstAttribute="leading" secondItem="MUX-5C-vWh" secondAttribute="leadingMargin" id="nTq-x8-ldd"/>
+                            <constraint firstItem="SJf-8A-8Ec" firstAttribute="leading" secondItem="MUX-5C-vWh" secondAttribute="leading" id="oAa-EH-Fjw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" id="MV5-eo-sjz"/>
+                    <connections>
+                        <outlet property="imagePreview" destination="PDb-Oi-w9M" id="6Yh-Ip-gmm"/>
+                        <outlet property="log" destination="UPy-5S-f4u" id="Jh9-mw-RDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1D-8v-Nfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="1228"/>
+        </scene>
+        <!--Concurency-->
+        <scene sceneID="gk2-Eu-sWh">
+            <objects>
+                <viewController id="LUc-lu-6I9" customClass="SyncViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyR-ks-cCI"/>
+                        <viewControllerLayoutGuide type="bottom" id="P05-pR-mSZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Ep-XM-RBF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HyZ-P0-pQr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-P7-H8O">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JXh-4F-zdL"/>
+                                    <barButtonItem title="Sync" id="XHD-Ek-LNF">
+                                        <connections>
+                                            <action selector="downloadSYNC:" destination="LUc-lu-6I9" id="b8l-nr-wq8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Async" id="kBW-vp-Wmw">
+                                        <connections>
+                                            <action selector="downloadASYNC:" destination="LUc-lu-6I9" id="CVb-aQ-8nX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HyZ-P0-pQr" secondAttribute="trailing" id="7gM-3x-9gJ"/>
+                            <constraint firstItem="HyZ-P0-pQr" firstAttribute="top" secondItem="1Ep-XM-RBF" secondAttribute="top" id="ARG-Bk-Kkv"/>
+                            <constraint firstItem="IHY-P7-H8O" firstAttribute="leading" secondItem="1Ep-XM-RBF" secondAttribute="leading" id="BKu-cE-2De"/>
+                            <constraint firstItem="HyZ-P0-pQr" firstAttribute="leading" secondItem="1Ep-XM-RBF" secondAttribute="leading" id="D8r-3p-xaI"/>
+                            <constraint firstAttribute="bottom" secondItem="HyZ-P0-pQr" secondAttribute="bottom" id="kUc-h2-FB4"/>
+                            <constraint firstItem="P05-pR-mSZ" firstAttribute="top" secondItem="IHY-P7-H8O" secondAttribute="bottom" id="lo8-cb-w7M"/>
+                            <constraint firstAttribute="trailing" secondItem="IHY-P7-H8O" secondAttribute="trailing" id="uCq-h2-wrf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Concurency" id="qna-tA-h3e"/>
+                    <connections>
+                        <outlet property="scrollView" destination="HyZ-P0-pQr" id="m7i-do-L1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6P-w9-9VE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="748"/>
+        </scene>
+        <!--Networking-->
+        <scene sceneID="N0O-mR-IwI">
+            <objects>
+                <viewController id="eID-hs-EMc" customClass="NetworkingViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ssR-fR-97i"/>
+                        <viewControllerLayoutGuide type="bottom" id="ju9-aa-G2D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n6x-2o-yUO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-59-TxU">
+                                <rect key="frame" x="0.0" y="477" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="GET" id="qPG-EE-b1n">
+                                        <connections>
+                                            <action selector="getRequest:" destination="eID-hs-EMc" id="WxN-xz-saD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="POST" id="B6i-H4-msp">
+                                        <connections>
+                                            <action selector="postRequest:" destination="eID-hs-EMc" id="fdc-Ep-XW7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uMP-dl-px5"/>
+                                    <barButtonItem title="JSON" id="Oql-n7-fen">
+                                        <connections>
+                                            <action selector="downloadJSON:" destination="eID-hs-EMc" id="OrV-PZ-ANg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVF-Rt-kpw">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hoK-Mi-Z6S"/>
+                                </constraints>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="0.0" maxX="0.0" maxY="64"/>
+                                <items>
+                                    <navigationItem title="Requests and JSON" id="lah-tg-w9Q"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6ZA-lX-fIk">
+                                <rect key="frame" x="16" y="64" width="288" height="413"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vVF-Rt-kpw" firstAttribute="top" secondItem="n6x-2o-yUO" secondAttribute="topMargin" id="2qO-YA-j2P"/>
+                            <constraint firstItem="6ZA-lX-fIk" firstAttribute="trailing" secondItem="n6x-2o-yUO" secondAttribute="trailingMargin" id="TCj-Ee-bHl"/>
+                            <constraint firstItem="vVF-Rt-kpw" firstAttribute="leading" secondItem="n6x-2o-yUO" secondAttribute="leadingMargin" constant="-20" id="TQ9-SL-pfW"/>
+                            <constraint firstAttribute="trailing" secondItem="Idz-59-TxU" secondAttribute="trailing" id="cNa-11-pDP"/>
+                            <constraint firstAttribute="bottom" secondItem="Idz-59-TxU" secondAttribute="bottom" constant="47" id="hR2-gN-3EO"/>
+                            <constraint firstItem="Idz-59-TxU" firstAttribute="leading" secondItem="n6x-2o-yUO" secondAttribute="leading" id="o78-sE-415"/>
+                            <constraint firstItem="6ZA-lX-fIk" firstAttribute="top" secondItem="vVF-Rt-kpw" secondAttribute="bottom" id="q0N-Rx-tUM"/>
+                            <constraint firstItem="6ZA-lX-fIk" firstAttribute="leading" secondItem="n6x-2o-yUO" secondAttribute="leadingMargin" id="v35-iN-Zwu"/>
+                            <constraint firstItem="Idz-59-TxU" firstAttribute="top" secondItem="6ZA-lX-fIk" secondAttribute="bottom" id="vWY-43-tuT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vVF-Rt-kpw" secondAttribute="trailing" constant="-20" id="yin-4A-oSE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Networking" id="5xl-ka-Hwq"/>
+                    <connections>
+                        <outlet property="log" destination="6ZA-lX-fIk" id="4nz-Mq-yBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msL-pj-rTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="119"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OeG-Pa-cL2">
+            <objects>
+                <tabBarController id="6eQ-Xu-wF5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DcY-JZ-blg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eID-hs-EMc" kind="relationship" relationship="viewControllers" id="hYs-5R-Xvu"/>
+                        <segue destination="LUc-lu-6I9" kind="relationship" relationship="viewControllers" id="yRY-9f-MrC"/>
+                        <segue destination="rk2-bO-BWC" kind="relationship" relationship="viewControllers" id="adD-YV-teB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxP-fm-sGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="434"/>
+        </scene>
+    </scenes>
+</document>
