@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353EC3ED1BA597E00023F4B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353EC3EC1BA597E00023F4B6 /* Media.xcassets */; settings = {ASSET_TAGS = (); }; };
 		35ECD8661BA46D9C00FD1A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECD8651BA46D9C00FD1A4B /* AppDelegate.swift */; };
 		35ECD86B1BA46D9C00FD1A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ECD8691BA46D9C00FD1A4B /* Main.storyboard */; };
-		35ECD86D1BA46D9C00FD1A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ECD86C1BA46D9C00FD1A4B /* Assets.xcassets */; };
-		35ECD8701BA46D9C00FD1A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ECD86E1BA46D9C00FD1A4B /* LaunchScreen.storyboard */; };
 		35ECD87C1BA4812C00FD1A4B /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECD87B1BA4812C00FD1A4B /* SearchCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		35ECD87E1BA4813A00FD1A4B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECD87D1BA4813A00FD1A4B /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		35ECD8801BA484F700FD1A4B /* FlickrImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ECD87F1BA484F700FD1A4B /* FlickrImage.swift */; settings = {ASSET_TAGS = (); }; };
@@ -19,12 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		353EC3EC1BA597E00023F4B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		35E17C861BA4D8FB002A1D45 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		35ECD8621BA46D9C00FD1A4B /* Image Downloader NSURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Downloader NSURLSession.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ECD8651BA46D9C00FD1A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35ECD86A1BA46D9C00FD1A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		35ECD86C1BA46D9C00FD1A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35ECD86F1BA46D9C00FD1A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35ECD8711BA46D9C00FD1A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35ECD87B1BA4812C00FD1A4B /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		35ECD87D1BA4813A00FD1A4B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +65,7 @@
 				35ECD8691BA46D9C00FD1A4B /* Main.storyboard */,
 				35ECD8861BA4AF5D00FD1A4B /* Controllers */,
 				35ECD8881BA4AF6C00FD1A4B /* Views */,
-				35ECD86C1BA46D9C00FD1A4B /* Assets.xcassets */,
-				35ECD86E1BA46D9C00FD1A4B /* LaunchScreen.storyboard */,
+				353EC3EC1BA597E00023F4B6 /* Media.xcassets */,
 				35ECD8711BA46D9C00FD1A4B /* Info.plist */,
 				35E17C861BA4D8FB002A1D45 /* MyPlayground.playground */,
 			);
@@ -175,8 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35ECD8701BA46D9C00FD1A4B /* LaunchScreen.storyboard in Resources */,
-				35ECD86D1BA46D9C00FD1A4B /* Assets.xcassets in Resources */,
+				353EC3ED1BA597E00023F4B6 /* Media.xcassets in Resources */,
 				35ECD86B1BA46D9C00FD1A4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,14 +202,6 @@
 				35ECD86A1BA46D9C00FD1A4B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		35ECD86E1BA46D9C00FD1A4B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35ECD86F1BA46D9C00FD1A4B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -304,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Image Downloader NSURLSession/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leonbaird.Image-Downloader-NSURLSession";
@@ -315,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Image Downloader NSURLSession/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leonbaird.Image-Downloader-NSURLSession";

@@ -77,10 +77,12 @@ class SearchCollectionViewController: UICollectionViewController, UISearchBarDel
             searchBar.text = nil
             searchBar.resignFirstResponder()
             photos = nil
-            UIView.beginAnimations("removeSearch", context: nil)
-            UIView.setAnimationDuration(1)
-            collectionView?.deleteSections(NSIndexSet(index: 0))
-            UIView.commitAnimations()
+            if collectionView?.numberOfSections() > 0 {
+                UIView.beginAnimations("removeSearch", context: nil)
+                UIView.setAnimationDuration(0.8)
+                collectionView?.deleteSections(NSIndexSet(index: 0))
+                UIView.commitAnimations()
+            }
         }
     }
 
