@@ -1,0 +1,75 @@
+Hi there,
+I looked up the info on NSURLSesson, and it is very easy to use.
+I also took the opportunity to make a new app over the weekend, and have written a simple FLICKR image downloader, that passes the image onto a scroll view and allows you to zoom it. Have a look, it also uses UICollectionViewControllers with a search bar (which is added programmatically)
+
+When you download from a NSURLSession, you make a session and choose how you want it to perform, 
+	NSURLSessionConfiguration.defaultSessionConfiguration
+		downloads normally and caches as much as possible
+
+	NSURLSessionConfiguration.ephemeralSessionConfiguration
+		downloads normally but does not cache anything
+
+	NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier
+		can download on a background thread when the app is not running
+
+This will give you your download session
+You then make a task by giving it either a simple URL - used for GET
+OR make a NSURLRequest exactly the same as I showed you, and use the method with
+NSURLRequest for POST
+
+example:
+	let session = NSURLSession(NSURLSessionConfiguration.defaultSessionConfiguration())
+	let task = session.dataTaskWithURL(myURL)
+     OR
+	let session = NSURLSession(NSURLSessionConfiguration.defaultSessionConfiguration())
+	let task = session.dataTaskWithRequest(myRequest)
+
+You can download in two ways, either with a completion handler or with delegation
+
+The completion handler is the simplest and fastest way, BUT has no feedback about the state of the download, so is no use for running progress bars etc. When downloading a large file and needing to show progress, become the delegate of your session, implement the protocol then and use one of the above methods and create your task.
+
+If you do not need progress info and want to quickly download, do the following when making the task:
+
+	let session = NSURLSession(NSURLSessionConfiguration.defaultSessionConfiguration())
+	let task = session.dataTaskWithURL(myURL, completionHandler: {
+                data, response, error in
+		// handle data, response and error in code
+		// data:NSData, response:NSURLResponse, error:NSError
+	})
+
+Much easier? Not sure why I did not use sessions earlier as they were introduced a while back.
+
+To start the session is a bit weird, as you use the command resume()?? Oh well, nothing is perfect:
+
+	task.resume()
+
+IMPORTANT NOTE:
+	Callbacks through completion handler from the session are usually on the 
+	background thread, so you may need to do a 
+	dispath_async(dispatch_get_main_queue(), { ..code..}) to update UI etc
+
+That's it!
+
+Also, noticed Apple has now included into String and NSString the method they used to ship as a standalone function for URL Encoding:
+
+	myString.stringByAddingPercentEncodingWithAllowedCharacters(
+		NSCharacterSet.URLQueryAllowedCharacterSet()
+	)
+
+You can choose the allowed characters through NSCharacterSet - I have used compatible characters with the ?stuff= part of the URL. Has options for the domain part too etc.
+
+Finally, with try and catch, here's how to extract the NSError
+
+do {
+   try dodgyMethod()
+} catch let error as NSError {
+   // handle error
+}
+
+Best wishes
+Leon
+
+
+
+
+
